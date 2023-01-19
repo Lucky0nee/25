@@ -9,13 +9,13 @@ int main() {
 	srand(time(NULL));
 
 	const int Size = 10;
-	int RandArr [Size]		   = { };
+	int RandArr [Size]	 = { };
 	int Непарнi [Size]       = { };
 	int Парнi   [Size]       = { };
 
-	int* PtrRandArr			 = RandArr;
-	int* PtrA				     = Непарнi; 	int SizeA = 0;
-	int* PtrB				     = Парнi; 		int SizeB = 0;
+	int* PtrRandArr	         = RandArr;
+	int* PtrA		 = Непарнi; 	int SizeA = 0;
+	int* PtrB		 = Парнi; 	int SizeB = 0;
 
 	for (int i = 0; i < Size; i++)
 		RandArr[i] = rand() % 100 - 10;

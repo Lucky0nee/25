@@ -5,7 +5,7 @@
 using namespace std;
 
 int main() {
-	system("chcp 1251>nul");
+	//system("chcp 1251>nul");
 	srand(time(NULL));
 
 	const int Size = 10;
@@ -36,11 +36,11 @@ int main() {
 
 	cout << "\nНепарнi значення: " << "\n";
 	for (int i = 0; i < SizeA; i++)
-		cout << Непарнi[i] << " ";
+		cout << *(Непарнi + i) << " ";
 
 	cout << "\nПарнi значення: " << "\n";
 	for (int i = 0; i < SizeB; i++)
-		cout << Парнi[i] << " ";
+		cout << *(Парнi + i)<< " ";
 
 }
 

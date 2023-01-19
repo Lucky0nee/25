@@ -5,17 +5,17 @@
 using namespace std;
 
 int main() {
-	system("chcp 1251>nul");
+	//system("chcp 1251>nul");
 	srand(time(NULL));
 
 	const int Size = 10;
-	int RandArr [Size]		 = { };
+	int RandArr [Size]		   = { };
 	int Непарнi [Size]       = { };
 	int Парнi   [Size]       = { };
 
 	int* PtrRandArr			 = RandArr;
-	int* PtrA				 = Непарнi; 	int SizeA = 0;
-	int* PtrB				 = Парнi; 		int SizeB = 0;
+	int* PtrA				     = Непарнi; 	int SizeA = 0;
+	int* PtrB				     = Парнi; 		int SizeB = 0;
 
 	for (int i = 0; i < Size; i++)
 		RandArr[i] = rand() % 100 - 10;
@@ -32,14 +32,17 @@ int main() {
 			SizeB++;
 		}
 	}	
-
-	cout << "Непарнi: " << "\n";
+	cout << "Псевдовипадковi значення: " << "\n";
+	for (int i = 0; i < Size; i++)
+		cout << RandArr[i] << " ";
+  
+	cout << "\nНепарнi значення: " << "\n";
 	for (int i = 0; i < SizeA; i++)
-		cout << Непарнi[i] << "\n";
+		cout << Непарнi[i] << " ";
 
-	cout << "Парнi: \n";
+	cout << "\nПарнi значення: " << "\n";
 	for (int i = 0; i < SizeB; i++)
-		cout << Парнi[i] << "\n";
+		cout << Парнi[i] << " ";
 
 }
 

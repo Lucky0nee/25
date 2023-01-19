@@ -5,37 +5,35 @@
 using namespace std;
 
 int main() {
-	//system("chcp 1251>nul");
+	system("chcp 1251>nul");
 	srand(time(NULL));
 
 	const int Size = 10;
-	int RandArr [Size]	 = { };
-	int Непарнi [Size]       = { };
-	int Парнi   [Size]       = { };
+	char RandArr[Size] = { };
+	char Непарнi[Size] = { };
+	char Парнi[Size] = { };
 
-	int* PtrRandArr	         = RandArr;
-	int* PtrA		 = Непарнi; 	int SizeA = 0;
-	int* PtrB		 = Парнi; 	int SizeB = 0;
+	char* PtrRandArr = RandArr;
+	char* PtrA = Непарнi; 	int SizeA = 0;
+	char* PtrB = Парнi; 	int SizeB = 0;
 
 	for (int i = 0; i < Size; i++)
-		RandArr[i] = rand() % 100 - 10;
-	
+		RandArr[i] = rand() % 85 + 40;
+
 	for (int i = 0; i < Size; i++) {
-		if (*(PtrRandArr + i) % 2)
-		{
-			Непарнi[SizeA] += PtrRandArr[i];
+		if (*(PtrRandArr + i) % 2) {
+			Непарнi[SizeA] += *(PtrRandArr + i);
 			SizeA++;
 		}
-		else if (*(PtrRandArr + i) != 0)
-		{
-			Парнi[SizeB] += PtrRandArr[i];
+		else {
+			Парнi[SizeB] += *(PtrRandArr + i);
 			SizeB++;
 		}
-	}	
+	}
 	cout << "Псевдовипадковi значення: " << "\n";
 	for (int i = 0; i < Size; i++)
 		cout << RandArr[i] << " ";
-  
+
 	cout << "\nНепарнi значення: " << "\n";
 	for (int i = 0; i < SizeA; i++)
 		cout << Непарнi[i] << " ";
